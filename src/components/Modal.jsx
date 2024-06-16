@@ -6,7 +6,7 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import { AiOutlineAudio } from "react-icons/ai";
-import { useState } from "react";
+
 import { AiOutlineAudioMuted } from "react-icons/ai";
 import { GrPowerReset } from "react-icons/gr";
 
@@ -124,59 +124,3 @@ export default function Modal({ open, onClose, Name, setName }) {
     </div>
   );
 }
-
-{
-  /* <div className="flex gap-4">
-  <button className=" w-full font-bold" onClick={onClose}>
-    Cancel!
-  </button>
-</div>; */
-}
-
-//  {Name && (
-//                 <h1 className="  text-[#322C2B]  text-4xl text-left font-bold">
-//                   {Name.toUpperCase()}
-//                 </h1>
-//               )}
-//               <div
-//                 className={`transition-all w-full ${
-//                   Name ? "translate-y-3" : "translate-y-0"
-//                 }`}
-//               >
-//                 <input
-//                   className="w-full  py-5 px-2 pl-5 rounded-md bg-gray-200  focus:outline-none "
-//                   maxLength="15"
-//                   placeholder="Name"
-//                   onChange={(e) => setName(e.target.value)}
-//                 />
-//                 <div className="flex flex-wrap gap-5 py-5">
-//                   {/* <p>Microphone: {listening ? "on" : "off"}</p> */}
-//                   {listening ? (
-//                     <button
-//                       className=" p-1 rounded-lg text-gray-400 bg-white text-2xl hover:bg-gray-50 hover:text-gray-600"
-//                       onClick={SpeechRecognition.stopListening}
-//                     >
-//                       <AiOutlineAudioMuted />
-//                     </button>
-//                   ) : (
-//                     <button
-//                       className=" p-1 rounded-lg text-gray-400 bg-white text-2xl hover:bg-gray-50 hover:text-gray-600"
-//                       onClick={startListening}
-//                     >
-//                       <AiOutlineAudio />
-//                     </button>
-//                   )}
-
-//                   {transcript && (
-//                     <button
-//                       className=" p-1 rounded-lg text-gray-400 bg-white text-2xl hover:bg-gray-50 hover:text-gray-600"
-//                       onClick={resetTranscript}
-//                     >
-//                       <GrPowerReset />
-//                     </button>
-//                   )}
-//                 </div>
-//                 <p className="text-lg text-gray-500 font-medium tracking-wide text-left">
-//                   {transcript}
-//                   </p>
-//                 </div>
