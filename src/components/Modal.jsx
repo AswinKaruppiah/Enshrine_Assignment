@@ -110,7 +110,10 @@ export default function Modal({ open, onClose, Name, setName }) {
             <div className="pb-5 md:p-0 w-full text-right">
               <button
                 className="text-3xl md:text-5xl  text-blue-600 font-bold hover:bg-blue-50 px-3 py-2 rounded-xl transition-colors"
-                onClick={onClose}
+                onClick={() => {
+                  onClose();
+                  SpeechRecognition.stopListening();
+                }}
               >
                 I'm done
               </button>
